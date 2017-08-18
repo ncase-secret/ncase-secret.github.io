@@ -1,0 +1,57 @@
+[
+
+	{
+		"name": "Parable of the Polygons",
+		"link": "http://ncase.me/polygons/",
+
+		"description": "blah blah blah",
+		"thumb": "polygons.png",
+		"tags": ["featured", "social"]
+	},
+
+	{
+		"name": "District",
+		"link": "http://polytrope.com/district/",
+
+		"description": "blah blah blah",
+		"thumb": "district.png",
+		"tags": ["featured", "civics"]
+	},
+
+	{
+		"name": "Virus: Beauty of the Beast",
+		"link": "http://viruspatterns.com/",
+
+		"description": "blah blah blah",
+		"thumb": "virus.png",
+		"tags": ["featured", "life"]
+	},
+
+	{
+		"name": "Learning Music",
+		"link": "https://learningmusic.ableton.com/",
+
+		"description": "blah blah blah",
+		"thumb": "learning_music.png",
+		"tags": ["featured", "art"]
+	},
+
+	{
+		"name": "The Evolution of Trust",
+		"link": "http://ncase.me/trust/",
+
+		"description": "blah blah blah",
+		"thumb": "trust.png",
+		"tags": ["featured", "social"]
+	},
+
+	{
+		"name": "The New Science of Sentencing",
+		"link": "https://www.themarshallproject.org/2015/08/04/the-new-science-of-sentencing",
+
+		"description": "blah blah blah",
+		"thumb": "sentencing.png",
+		"tags": ["journalism"]
+	}
+
+]

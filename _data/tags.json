@@ -1,0 +1,38 @@
+[
+	{
+		"id": "math",
+		"name": "math",
+		"color": "hsl(220, 70%, 56%)"
+	},
+
+	{
+		"id": "social",
+		"name": "social science",
+		"color": "hsl(30, 70%, 56%)"
+	},
+
+	{
+		"id": "art",
+		"name": "art",
+		"color": "hsl(0, 70%, 56%)"
+	},
+
+	{
+		"id": "civics",
+		"name": "civics",
+		"color": "hsl(54, 100%, 47%)"
+	},
+
+	{
+		"id": "life",
+		"name": "life sciences",
+		"color": "hsl(90, 100%, 47%)"
+	},
+
+	{
+		"id": "journalism",
+		"name": "journalism",
+		"color": "hsl(270, 100%, 47%)"
+	}
+
+]

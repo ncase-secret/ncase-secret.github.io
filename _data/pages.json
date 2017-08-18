@@ -1,0 +1,74 @@
+{
+
+	"index": {
+		"title": "<b style='letter-spacing:6px; font-size:1.085em'>EXPLORABLE</b><br><span style='letter-spacing:5px'>EXPLANATIONS</span>",
+		"intro": "something about humans' unique capacity for play, or whatever. <b>Here's three featured Explorables:</b>",
+
+		"splash": "hello",
+		"gallery": {
+			"big": true,
+			"sort": "random"
+		}
+	},
+
+	"math": {
+		"title": "<b>MATH</b>",
+		"intro": "something about math and play or whatever",
+
+		"splash": "hello",
+		"gallery": {
+			"sort": "featured-first"
+		}
+	},
+
+	"social": {
+		"title": "<b>SOCIAL</b> SCIENCE",
+		"intro": "something about understanding humans",
+
+		"splash": "hello",
+		"gallery": {
+			"sort": "featured-first"
+		}
+	},
+
+	"art": {
+		"title": "THE <b>ARTS</b>",
+		"intro": "something about art being the pinnacle of human playfulness",
+
+		"splash": "hello",
+		"gallery": {
+			"sort": "featured-first"
+		}
+	},
+
+	"civics": {
+		"title": "<b>CIVICS</b>",
+		"intro": "something about human democracy",
+
+		"splash": "hello",
+		"gallery": {
+			"sort": "featured-first"
+		}
+	},
+
+	"life": {
+		"title": "<b>LIFE</b> SCIENCES",
+		"intro": "something about life",
+
+		"splash": "hello",
+		"gallery": {
+			"sort": "featured-first"
+		}
+	},
+
+	"journalism": {
+		"title": "<b>JOURNALISM</b>",
+		"intro": "something about journalism, informed democracy",
+
+		"splash": "hello",
+		"gallery": {
+			"sort": "featured-first"
+		}
+	}
+
+}
