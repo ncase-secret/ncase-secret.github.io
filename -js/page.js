@@ -16,11 +16,11 @@ var explorables;
 var tags;
 window.addEventListener("load", function(){
 	Q.all([
-		pegasus("_data/pages.json"),
-		pegasus("_data/explorables.json"),
-		pegasus("_data/tags.json"),
-		pegasus("_data/footer_nav.html"),
-		pegasus("_data/footer_credits.html")
+		pegasus("-data/pages.json"),
+		pegasus("-data/explorables.json"),
+		pegasus("-data/tags.json"),
+		pegasus("-data/footer_nav.html"),
+		pegasus("-data/footer_credits.html")
 	]).then(function(data){
 
 		// Store Data
@@ -48,7 +48,7 @@ var _showPage = function(pageID){
 	var page = pages[pageID];
 
 	// Just dump in the data
-	splash_iframe.src = "_splash/"+page.splash;
+	splash_iframe.src = "-splash/"+page.splash;
 	splash_title.innerHTML = page.title;
 	intro.innerHTML = page.intro;
 
@@ -115,7 +115,7 @@ var _makeGalleryEntry = function(entry){
 	
 	// Thumbnail
 	var thumb = _createDom("thumb", dom, "img");
-	thumb.src = "_thumbs/"+entry.thumb;
+	thumb.src = "-thumbs/"+entry.thumb;
 	
 	// Name
 	var name = _createDom("name", dom, "div");
