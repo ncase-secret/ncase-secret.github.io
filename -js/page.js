@@ -48,7 +48,7 @@ var _showPage = function(pageID){
 	var page = pages[pageID];
 
 	// Just dump in the data
-	splash_iframe.src = "-splash/"+page.splash;
+	splash_iframe.src = window.location.origin+"/-splash/"+page.splash;
 	splash_title.innerHTML = page.title;
 	intro.innerHTML = page.intro;
 
