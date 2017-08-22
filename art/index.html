@@ -1,22 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="/">
-	<title>Art | Explorable Explanations</title>
+
+	<base href='/'>
+	<title>Arts | Explorable Explanations</title>
+
+	<!-- Meta -->
+	<meta name="viewport" content="width=600, initial-scale=1">
+
+	<!-- Style -->
 	<link rel="stylesheet" type="text/css" href="-css/page.css">
+	
+
 </head>
 <body>
+
 	<noscript>
-		<div id="">
-			Sorry! Explorable Explanations needs JavaScript.
-			Don't worry, there's no tracking code or anything creepy like that,
-			the JS is just so I can dynamically load shtuff.
-			Thanks!
-		</div>
+		Sorry! Explorable Explanations needs JavaScript.
+		Don't worry, there's no tracking code or anything creepy like that,
+		the JS is just so I can dynamically load shtuff.
+		Thanks!
 	</noscript>
-	<script src="-js/q.js"></script>
-	<script src="-js/pegasus.js"></script>
-	<script src="-js/helpers.js"></script>
-	<script src="-js/page.js"></script>
+
+	<!-- Splash Page! -->
+	<div id="splash">
+		<iframe id="splash_iframe" src="/-splash/boids/"></iframe>
+		<div id="splash_title">THE <b>ARTS</b></div>
+		<div id="splash_arrow">
+			<div></div><div></div><div></div><div></div>
+		</div>
+	</div>
+	
+	<!-- Words & Gallery! -->
+	<div id="words">
+		<div id="intro">something about art being the pinnacle of human playfulness</div>
+		<div id="gallery"></div>
+	</div>
+
+	<!-- FOOTER: Navigate to other parts of the site -->
+	<div id="footer_nav_container">
+		<div id="footer_nav">
+			oh dang there's cool categories now:
+			<br>
+			<div id="tags_explorables"></div>
+			<br>
+			more stuff:
+			<br>
+			<div id="tags_not_explorables"></div>
+		</div>
+	</div>
+	
+	<!-- Site credits -->
+	<div id="footer_credits_container">
+		<div id="footer_credits">
+			site credits go here, i guess
+		</div>
+	</div>
+
 </body>
 </html>
+
+<!-- Scripts! -->
+<script src="-js/q.js"></script>
+<script src="-js/pegasus.js"></script>
+<script src="-js/helpers.js"></script>
+<script src="-js/page.js"></script>

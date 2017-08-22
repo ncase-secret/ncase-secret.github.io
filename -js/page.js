@@ -2,6 +2,8 @@
 var splash = _createDom("splash");
 var splash_iframe = _createDom("splash_iframe", splash, "iframe");
 var splash_title = _createDom("splash_title", splash);
+var splash_arrow = _createDom("splash_arrow", splash);
+splash_arrow.innerHTML = "<div></div><div></div><div></div><div></div>";
 var words = _createDom("words");
 var intro = _createDom("intro", words);
 var gallery = _createDom("gallery", words);
@@ -24,10 +26,9 @@ window.addEventListener("load", function(){
 	]).then(function(data){
 
 		// Store Data
-		pages = JSON.parse(data[0]);
-		explorables = JSON.parse(data[1]);
-		tags = JSON.parse(data[2]);
-		tags.sort(function(a,b){ return a.id>b.id; }); // sort alphabetically
+		pages = JSON.parse(_clean(data[0]));
+		explorables = JSON.parse(_clean(data[1]));
+		tags = JSON.parse(_clean(data[2]));
 
 		// Insert HTML
 		footer_nav.innerHTML = data[3];
@@ -48,7 +49,7 @@ var _showPage = function(pageID){
 	var page = pages[pageID];
 
 	// Just dump in the data
-	//splash_iframe.src = window.location.origin+"/-splash/"+page.splash;
+	splash_iframe.src = window.location.origin+"/-splash/"+page.splash+"/";
 	splash_title.innerHTML = page.title;
 	intro.innerHTML = page.intro;
 
@@ -61,14 +62,30 @@ var _showPage = function(pageID){
 	var tag = (pageID=="index") ? "featured" : pageID; // tag is "featured" or pageID!
 	_showGallery(page.gallery, tag);
 
+	// P.S: Splash
+	if(pageID!="index"){
+		$("#splash").style.background = "#dd4040";
+	}
+
 	// Show tags
 	_makeTagStyle(tags);
 	setTimeout(function(){
-		$("#tags").innerHTML = ""; // clear out
-		for(var i=0; i<tags.length; i++){
-			var tagButton = _makeTagButton(tags[i].id);
-			$("#tags").appendChild(tagButton);
+		
+		// Explorables Tags
+		var explorableTags = tags.filter(function(tag){ return tag.explorable; });
+		explorableTags.sort(function(a,b){
+			return a.id.localeCompare(b.id); // sort alphabetically
+		});
+		for(var i=0; i<explorableTags.length; i++){
+			$("#tags_explorables").appendChild( _makeTagButton(explorableTags[i].id) );
 		}
+
+		// Meta Tags
+		var miscTags = tags.filter(function(tag){ return !tag.explorable; });
+		for(var i=0; i<miscTags.length; i++){
+			$("#tags_not_explorables").appendChild( _makeTagButton(miscTags[i].id) );
+		}
+
 	},1);
 
 	// Resize everything
@@ -162,18 +179,30 @@ var _makeTagButton = function(tagID, small){
 	return button;
 };
 
+// Helper: remove newlines
+var _clean = function(str){
+	str = str.replace(/[^\:]\/\/.*\n/g,""); // strip comments
+	str = str.replace(/\n|\t/g,""); // strip newlines & tabs
+	return str;
+};
+
 // RESIZE
 var _resize = function(){
 
 	// Splash title position...
-	setTimeout(function(){
+	// TODO: IN CSS
+	/*setTimeout(function(){
 		var bounds = splash_title.getBoundingClientRect();
 		var w = bounds.width;
 		var h = bounds.height;
 		splash_title.style.marginTop = ((330-h)/2)+"px";
-	},1);
+	},1);*/
 
 };
 window.addEventListener("resize", _resize, false);
 
 // SCROLL
+window.onscroll = function(){
+	var scrollY = window.pageYOffset;
+	splash_iframe.style.top = (scrollY/2)+"px";
+};

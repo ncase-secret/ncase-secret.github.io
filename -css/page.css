@@ -36,15 +36,16 @@ b, strong{
 ********************/
 
 #splash{
+	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 350px;
+	height: 390px;
 	background: #222222;
 }
 #splash_iframe{
 	border: none;
     width: 100%;
-    height: 350px;
+    height: 400px;
     position: absolute;
 }
 #splash_title{
@@ -52,6 +53,44 @@ b, strong{
 	text-align: center;
 	font-size: 120px;
 	line-height: 0.85em;
+	margin-top: 115px;
+	pointer-events: none;
+}
+#splash_arrow{
+	position: absolute;
+	bottom:0;
+	width:100%;
+	height: 50px;
+	pointer-events: none;
+}
+#splash_arrow > div{
+    position: absolute;
+}
+#splash_arrow > div:nth-child(-n+2){
+    width: 50%;
+    height: 100%;
+    background: #fff;
+}
+#splash_arrow > div:nth-child(1){
+    left: -50px;
+}
+#splash_arrow > div:nth-child(2){
+    right: -50px;
+}
+#splash_arrow > div:nth-child(n+3){
+    width: 0;
+	height: 0;
+	border-style: solid;
+}
+#splash_arrow > div:nth-child(3){
+	border-width: 50px 0 0 50px;
+	border-color: transparent transparent transparent #ffffff;
+    left: calc(50% - 50px);
+}
+#splash_arrow > div:nth-child(4){
+	border-width: 0 0 50px 50px;
+	border-color: transparent transparent #ffffff transparent;
+    right: calc(50% - 50px);
 }
 
 /*******************
@@ -60,7 +99,7 @@ b, strong{
 
 #words{
 	width: 100%;
-	padding: 50px 0 30px 0;
+	padding: 30px 0;
 }
 #intro{
 	max-width: calc(100% - 50px);
@@ -96,10 +135,11 @@ b, strong{
 	opacity: 0.7;
 }
 #gallery[big=yes] #entry #name{
+	color: #000;
 	font-weight: 700;
 }
 #gallery[big=yes] #entry #description{
-	color: #222;
+	color: #999;
 	font-size: 22px;
 }
 
@@ -117,9 +157,9 @@ b, strong{
 	max-width: calc(100% - 50px);
 	width:640px;
 }
-#tags{
+#tags_explorables, #tags_not_explorables{
 	text-align:center;
-	margin-top: 0.5em;
+	margin: 0.5em 0;
 }
 .tag{
 	position: relative;

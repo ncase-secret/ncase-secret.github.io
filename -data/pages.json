@@ -1,10 +1,17 @@
 {
 
 	"index": {
-		"title": "<b style='letter-spacing:6px; font-size:1.085em'>EXPLORABLE</b><br><span style='letter-spacing:5px'>EXPLANATIONS</span>",
+		"title": "",
+		"desc": "blah blah blah",
+
+		"splashTitle": "
+			<b style='letter-spacing:6px; font-size:1.085em'>E<span style='position:relative;right:-4px'>X</span>
+			<span style='position:relative;right:-5px'>P</span>L<span style='position:relative;left:-3px'>O</span>
+			<span style='position:relative;left:-8px'>R</span>ABLE</b><br>
+			<span style='letter-spacing:5px'>EXP<span style='position:relative;left:-6px'>L</span>ANATIONS</span>",
 		"intro": "something about humans' unique capacity for play, or whatever. <b>Here's three random Explorables:</b>",
 
-		"splash": "hello",
+		"splash": "boids",
 		"gallery": {
 			"big": true,
 			"sort": "random"
@@ -12,60 +19,79 @@
 	},
 
 	"math": {
-		"title": "<b>MATH</b>",
-		"intro": "something about math and play or whatever",
+		"title": "Math",
+		"desc": "blah blah blah",
 
-		"splash": "hello",
+		"splashTitle": "<b>MATH</b>",
+		"intro": "something about MATH
+				  and play or whatever",
+
+		"splash": "boids",
 		"gallery": {
 			"sort": "featured-first"
 		}
 	},
 
 	"social": {
-		"title": "<b>SOCIAL</b> SCIENCE",
+		"title": "Social Science",
+		"desc": "blah blah blah",
+
+		"splashTitle": "<b>SOCIAL</b> SCIENCE",
 		"intro": "something about understanding humans",
 
-		"splash": "hello",
+		"splash": "boids",
 		"gallery": {
 			"sort": "featured-first"
 		}
 	},
 
 	"art": {
-		"title": "THE <b>ARTS</b>",
+		"title": "Arts",
+		"desc": "blah blah blah",
+
+		"splashTitle": "THE <b>ARTS</b>",
 		"intro": "something about art being the pinnacle of human playfulness",
 
-		"splash": "hello",
+		"splash": "boids",
 		"gallery": {
 			"sort": "featured-first"
 		}
 	},
 
 	"civics": {
-		"title": "<b>CIVICS</b>",
+		"title": "Civics",
+		"desc": "blah blah blah",
+
+		"splashTitle": "<b>CIVICS</b>",
 		"intro": "something about human democracy",
 
-		"splash": "hello",
+		"splash": "boids",
 		"gallery": {
 			"sort": "featured-first"
 		}
 	},
 
-	"life": {
-		"title": "<b>LIFE</b> SCIENCES",
+	"biology": {
+		"title": "Biology",
+		"desc": "blah blah blah",
+
+		"splashTitle": "<b>BIOLOGY</b>",
 		"intro": "something about life",
 
-		"splash": "hello",
+		"splash": "boids",
 		"gallery": {
 			"sort": "featured-first"
 		}
 	},
 
 	"journalism": {
-		"title": "<b>JOURNALISM</b>",
+		"title": "Journalism",
+		"desc": "blah blah blah",
+
+		"splashTitle": "<b>JOURNALISM</b>",
 		"intro": "something about journalism, informed democracy",
 
-		"splash": "hello",
+		"splash": "boids",
 		"gallery": {
 			"sort": "featured-first"
 		}
