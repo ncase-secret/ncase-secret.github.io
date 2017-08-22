@@ -1,17 +1,3 @@
-// ADD DOM ELEMENTS FIRST
-var splash = _createDom("splash");
-var splash_iframe = _createDom("splash_iframe", splash, "iframe");
-var splash_title = _createDom("splash_title", splash);
-var splash_arrow = _createDom("splash_arrow", splash);
-splash_arrow.innerHTML = "<div></div><div></div><div></div><div></div>";
-var words = _createDom("words");
-var intro = _createDom("intro", words);
-var gallery = _createDom("gallery", words);
-var footer_nav_container = _createDom("footer_nav_container");
-var footer_nav = _createDom("footer_nav", footer_nav_container);
-var footer_credits_container = _createDom("footer_credits_container");
-var footer_credits = _createDom("footer_credits", footer_credits_container);
-
 // LOAD THE JSONS
 var pages;
 var explorables;
@@ -20,19 +6,13 @@ window.addEventListener("load", function(){
 	Q.all([
 		pegasus("-data/pages.json"),
 		pegasus("-data/explorables.json"),
-		pegasus("-data/tags.json"),
-		pegasus("-data/footer_nav.html"),
-		pegasus("-data/footer_credits.html")
+		pegasus("-data/tags.json")
 	]).then(function(data){
 
 		// Store Data
 		pages = JSON.parse(_clean(data[0]));
 		explorables = JSON.parse(_clean(data[1]));
 		tags = JSON.parse(_clean(data[2]));
-
-		// Insert HTML
-		footer_nav.innerHTML = data[3];
-		footer_credits.innerHTML = data[4];
 
 		// Show page!
 		_showPage(window.location.pathname);
@@ -48,24 +28,9 @@ var _showPage = function(pageID){
 	pageID = pageID || "index";
 	var page = pages[pageID];
 
-	// Just dump in the data
-	splash_iframe.src = window.location.origin+"/-splash/"+page.splash+"/";
-	splash_title.innerHTML = page.title;
-	intro.innerHTML = page.intro;
-
-	// Style: Color!
-	var style = document.createElement("style");
-	style.innerHTML = "#entry #name{ color:"+page.color+"; }";
-	document.head.appendChild(style);
-
 	// Show gallery
 	var tag = (pageID=="index") ? "featured" : pageID; // tag is "featured" or pageID!
 	_showGallery(page.gallery, tag);
-
-	// P.S: Splash
-	if(pageID!="index"){
-		$("#splash").style.background = "#dd4040";
-	}
 
 	// Show tags
 	_makeTagStyle(tags);

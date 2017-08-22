@@ -28,7 +28,15 @@ for(var pageID in pages){
 	if(!isIndex) title = page.title+" | "+title;
 	html = html.replace("[[title]]", title);
 
-	// 3. Index style?
+	// 3. Splash BG color
+	if(isIndex){
+		html = html.replace("[[splash_color]]", "");
+	}else{
+		var tag = tags.filter(function(tag){ return tag.id==pageID; })[0];
+		html = html.replace("[[splash_color]]", "style='background:"+tag.color+";'");
+	}
+
+	// 4. Index style?
 	html = html.replace("[[index_style?]]", isIndex ?
 		"<style>"+
 		"#splash_title{ margin-top: 65px; }"+
@@ -36,13 +44,13 @@ for(var pageID in pages){
 		"</style>"
 	: "");
 
-	// 4. Iframe Src
+	// 5. Iframe Src
 	html = html.replace("[[iframe_src]]", "/-splash/"+page.splash+"/");
 
-	// 5. Splash title
+	// 6. Splash title
 	html = html.replace("[[splash_title]]", page.splashTitle);
 
-	// 6. Intro Words
+	// 7. Intro Words
 	html = html.replace("[[intro]]", page.intro);
 
 	////////////////////////////////
