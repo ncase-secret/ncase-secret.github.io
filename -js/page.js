@@ -69,6 +69,7 @@ var _showGallery = function(query, tag){
 
 	// Load all by tag
 	var results = explorables.filter(function(e){
+		//return true;
 		return e.tags.indexOf(tag)>=0; // yes, has the tag!
 	});
 
@@ -107,7 +108,7 @@ var _showGallery = function(query, tag){
 		}); 
 
 		gallery.setAttribute("size", "big"); // Make it big
-		results = results.splice(0,3); // Only show first three results
+		results = results.splice(0,3); // Only show first THREE results
 
 	}else{
 
@@ -215,6 +216,9 @@ var _csvToJSON = function(csv){
 		// Convert props
 		var tags = [props[4]];
 		if(props[5]=="yes") tags.push("featured");
+
+		// Oh. Forget it.
+		if(props[0]=="") continue;
 
 		// Add result
 		results.push({

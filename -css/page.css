@@ -132,7 +132,7 @@ b, strong{
 	text-align: justify;
 }
 #gallery{
-	max-width: calc(100% - 50px);
+	max-width: calc(100% - 40px);
 	width:800px;
 	margin: auto;
 	margin-top: 40px;
