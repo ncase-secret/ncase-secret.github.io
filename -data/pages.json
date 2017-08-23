@@ -17,7 +17,7 @@
 
 		"splash": "boids",
 		"gallery": {
-			"big": true,
+			"index": true,
 			"sort": "random"
 		}
 	},

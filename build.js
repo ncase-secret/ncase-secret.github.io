@@ -28,15 +28,7 @@ for(var pageID in pages){
 	if(!isIndex) title = page.title+" | "+title;
 	html = html.replace("[[title]]", title);
 
-	// 3. Splash BG color
-	if(isIndex){
-		html = html.replace("[[splash_color]]", "");
-	}else{
-		var tag = tags.filter(function(tag){ return tag.id==pageID; })[0];
-		html = html.replace("[[splash_color]]", "style='background:"+tag.color+";'");
-	}
-
-	// 4. Index style? If Text is TOO BIG
+	// 3. Index style? If Text is TOO BIG
 	if(page.customCSS){
 		html = html.replace("[[index_style?]]", "<style>"+page.customCSS+"</style>");
 	}else{
@@ -48,13 +40,24 @@ for(var pageID in pages){
 		: "");
 	}
 
+	// 4. Splash BG color
+	if(isIndex){
+		html = html.replace("[[splash_color]]", "");
+	}else{
+		var tag = tags.filter(function(tag){ return tag.id==pageID; })[0];
+		html = html.replace("[[splash_color]]", "style='background:"+tag.color+";'");
+	}
+
 	// 5. Iframe Src
 	html = html.replace("[[iframe_src]]", "/-splash/"+page.splash+"/");
 
 	// 6. Splash title
 	html = html.replace("[[splash_title]]", page.splashTitle);
 
-	// 7. Intro Words
+	// 7. Splash home?
+	html = html.replace("[[splash_home?]]", !isIndex ? "<a href='/' id='splash_home'></a>" : "");
+
+	// 8. Intro Words
 	html = html.replace("[[intro]]", page.intro);
 
 	////////////////////////////////

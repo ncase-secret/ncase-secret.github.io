@@ -49,7 +49,7 @@
 	{
 		"id": "art",
 		"name": "art",
-		"color": "hsl(0, 70%, 56%)",
+		"color": "#ff4040",
 		"explorable": true
 	},
 	{
@@ -103,7 +103,7 @@
 	{
 		"id": "tools",
 		"name": "tools",
-		"color": "hsl(0, 70%, 56%)",
+		"color": "#ff4040",
 		"explorable": false
 	},
 	{

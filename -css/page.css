@@ -92,6 +92,30 @@ b, strong{
 	border-color: transparent transparent #ffffff transparent;
     right: calc(50% - 50px);
 }
+#splash_home{
+	display: block;
+    width:70px; height:70px;
+    background: url(home.png);
+    background-size: 100% 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+}
+#splash_home:after{
+	content: 'back to home page';
+	display: none;
+    width: 110px;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 19px;
+    left: 80px;
+    line-height: 1em;
+}
+#splash_home:hover:after{
+    display: block;
+}
 
 /*******************
 ****** WORDS ******
@@ -114,33 +138,65 @@ b, strong{
 	margin-top: 40px;
 	overflow: hidden;
 }
-#gallery[big=yes]{
-	width: 600px;
-}
-#gallery[big=yes] #entry{
-	width: 600px;
+#gallery #entry{
 	float:left;
-	margin-bottom: 30px;
+	margin-bottom: 35px;
 }
-#gallery[big=yes] #entry #thumb{
-	width: 598px;
-	height: 148px;
+#gallery #entry #thumb{
 	border: 1px solid #eee;
 	background: #bbb;
 
 	transition: opacity 0.1s ease-in-out;
 	opacity: 1;
 }
-#gallery[big=yes] #entry:hover #thumb{
+#gallery #entry:hover #thumb{
 	opacity: 0.7;
 }
-#gallery[big=yes] #entry #name{
+#gallery #entry #name{
 	color: #000;
 	font-weight: 700;
+	line-height: 1em;
+    margin-top: 6px;
 }
-#gallery[big=yes] #entry #description{
+#gallery #entry #description{
 	color: #999;
 	font-size: 22px;
+	line-height: 1.3em;
+}
+#gallery[size=big]{
+	width: 600px;
+}
+#gallery[size=big] #entry{
+	width: 600px;
+}
+#gallery[size=big] #entry #thumb{
+	width: 598px;
+	height: 148px;
+}
+#gallery[size=big] #entry:hover #thumb{}
+#gallery[size=big] #entry #name{}
+#gallery[size=big] #entry #description{}
+#gallery[size=small]{
+	width: 820px;
+}
+#gallery[size=small] #entry{
+	width: 400px;
+	margin: 0 5px 25px 5px;
+}
+#gallery[size=small] #entry #thumb{
+	width: 398px;
+	height: 98px;
+}
+#gallery[size=small] #entry:hover #thumb{}
+#gallery[size=small] #entry #name{
+	font-size: 22px;
+}
+#gallery[size=small] #entry #description{
+	font-size: 20px;
+}
+#gallery[size=small] .divider{
+	display: block;
+	clear:both;
 }
 
 /*******************

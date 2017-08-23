@@ -21,6 +21,7 @@ window.addEventListener("load", function(){
 },false);
 
 // SHOW PAGE
+var pageIsIndex = false;
 var _showPage = function(pageID){
 
 	// Get page config
@@ -28,8 +29,11 @@ var _showPage = function(pageID){
 	pageID = pageID || "index";
 	var page = pages[pageID];
 
+	// IS INDEX?
+	pageIsIndex = (pageID=="index");
+
 	// Show gallery
-	var tag = (pageID=="index") ? "featured" : pageID; // tag is "featured" or pageID!
+	var tag = pageIsIndex ? "featured" : pageID; // tag is "featured" or pageID!
 	_showGallery(page.gallery, tag);
 
 	// Show tags
@@ -61,6 +65,8 @@ var _showPage = function(pageID){
 // SHOW GALLERY
 var _showGallery = function(query, tag){
 
+	var gallery = $("#gallery");
+
 	// Load all by tag
 	var results = explorables.filter(function(e){
 		return e.tags.indexOf(tag)>=0; // yes, has the tag!
@@ -71,18 +77,57 @@ var _showGallery = function(query, tag){
 		case "random":
 			_shuffle(results);
 			break;
+		case "featured-first": // separate, shuffle each, concat.
+			var featured = [];
+			var not_featured = [];
+			for(var i=0;i<results.length;i++){
+				var entry = results[i];
+				if(entry.tags.indexOf("featured")>=0){
+					featured.push(entry);
+				}else{
+					not_featured.push(entry);
+				}
+			}
+			_shuffle(featured);
+			_shuffle(not_featured);
+			results = featured.concat(not_featured);
+			break;
 	}
 
-	// Is this the index page? Then show 'em NICE AND BIG
-	//if(query.big){
-		gallery.setAttribute("big", "yes"); // Make it big
+	// Is this the index page? Then...
+	if(query.index){
+		
+		// Get rid of all NON EXPLORABLE results
+		results = results.filter(function(e){
+			if(e.tags.indexOf("tools")>=0) return false;
+			if(e.tags.indexOf("tutorials")>=0) return false;
+			if(e.tags.indexOf("reading")>=0) return false;
+			if(e.tags.indexOf("faq")>=0) return false;
+			return true;
+		}); 
+
+		gallery.setAttribute("size", "big"); // Make it big
 		results = results.splice(0,3); // Only show first three results
-	//}
+
+	}else{
+
+		gallery.setAttribute("size", "small"); // Make it small
+
+	}
 
 	// Insert each result into the gallery
 	for(var i=0; i<results.length; i++){
+
 		var entry = _makeGalleryEntry(results[i]);
 		gallery.appendChild(entry);
+
+		// Divider...
+		if(!query.index && i%2==1){
+			var span = document.createElement("span");
+			span.className = "divider";
+			gallery.appendChild(span);
+		}
+
 	}
 
 };
@@ -97,7 +142,8 @@ var _makeGalleryEntry = function(entry){
 	
 	// Thumbnail
 	var thumb = _createDom("thumb", dom, "img");
-	thumb.src = "-thumbs/"+entry.thumb;
+	//thumb.src = "-thumbs/"+entry.thumb;
+	thumb.src = "-thumbs/placeholder.jpg";
 	
 	// Name
 	var name = _createDom("name", dom, "div");
@@ -162,8 +208,9 @@ var _csvToJSON = function(csv){
 		var line = lines[i];
 
 		// Get props
-		var props = line.split(",");
-		for(var j=0; j<props.length; j++) props[j] = props[j].slice(1, props[j].length-1); // remove quotes
+		var props = line.split('\",\"');
+		props[0] = props[0].slice(1); // remove quotes
+		props[5] = props[5].slice(0, props[5].length-1); // remove quotes
 
 		// Convert props
 		var tags = [props[4]];
@@ -195,6 +242,11 @@ var _resize = function(){
 		var h = bounds.height;
 		splash_title.style.marginTop = ((330-h)/2)+"px";
 	},1);*/
+
+	if(!pageIsIndex){
+		var gallery = $("#gallery");
+		gallery.setAttribute("size", (window.innerWidth<890) ? "big" : "small");
+	}
 
 };
 window.addEventListener("resize", _resize, false);
