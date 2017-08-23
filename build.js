@@ -36,13 +36,17 @@ for(var pageID in pages){
 		html = html.replace("[[splash_color]]", "style='background:"+tag.color+";'");
 	}
 
-	// 4. Index style?
-	html = html.replace("[[index_style?]]", isIndex ?
-		"<style>"+
-		"#splash_title{ margin-top: 65px; }"+
-		"@media (max-width: 900px){ #splash_title{ font-size: 75px; margin-top: 105px; } }"+
-		"</style>"
-	: "");
+	// 4. Index style? If Text is TOO BIG
+	if(page.customCSS){
+		html = html.replace("[[index_style?]]", "<style>"+page.customCSS+"</style>");
+	}else{
+		html = html.replace("[[index_style?]]", isIndex ?
+			"<style>"+
+			"#splash_title{ margin-top: 65px; }"+
+			"@media (max-width: 900px){ #splash_title{ font-size: 75px; margin-top: 105px; } }"+
+			"</style>"
+		: "");
+	}
 
 	// 5. Iframe Src
 	html = html.replace("[[iframe_src]]", "/-splash/"+page.splash+"/");

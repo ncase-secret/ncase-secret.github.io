@@ -5,14 +5,14 @@ var tags;
 window.addEventListener("load", function(){
 	Q.all([
 		pegasus("-data/pages.json"),
-		pegasus("-data/explorables.json"),
-		pegasus("-data/tags.json")
+		pegasus("-data/tags.json"),
+		pegasus("-data/explorables.csv")
 	]).then(function(data){
 
 		// Store Data
 		pages = JSON.parse(_clean(data[0]));
-		explorables = JSON.parse(_clean(data[1]));
-		tags = JSON.parse(_clean(data[2]));
+		tags = JSON.parse(_clean(data[1]));
+		explorables = _csvToJSON(data[2]);
 
 		// Show page!
 		_showPage(window.location.pathname);
@@ -149,6 +149,39 @@ var _clean = function(str){
 	str = str.replace(/[^\:]\/\/.*\n/g,""); // strip comments
 	str = str.replace(/\n|\t/g,""); // strip newlines & tabs
 	return str;
+};
+
+// CSV to JSON
+var _csvToJSON = function(csv){
+
+	var results = [];
+
+	// Get lines
+	var lines = csv.split("\n");
+	for(var i=1; i<lines.length; i++){ // skip first line, it's the header
+		var line = lines[i];
+
+		// Get props
+		var props = line.split(",");
+		for(var j=0; j<props.length; j++) props[j] = props[j].slice(1, props[j].length-1); // remove quotes
+
+		// Convert props
+		var tags = [props[4]];
+		if(props[5]=="yes") tags.push("featured");
+
+		// Add result
+		results.push({
+			name: props[0],
+			description: props[1],
+			link: props[2],
+			thumb: props[3],
+			tags: tags
+		});
+
+	}
+
+	return results;
+
 };
 
 // RESIZE

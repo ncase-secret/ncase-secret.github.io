@@ -31,7 +31,7 @@
 	{
 		"id": "biology",
 		"name": "biology",
-		"color": "hsl(90, 100%, 40%)",
+		"color": "hsl(90, 100%, 36%)",
 		"explorable": true
 	},
 	{
@@ -67,13 +67,19 @@
 	{
 		"id": "economics",
 		"name": "economics",
-		"color": "hsl(90, 100%, 25%)",
+		"color": "hsl(90, 100%, 20%)",
 		"explorable": true
 	},
 	{
 		"id": "programming",
 		"name": "programming",
 		"color": "#E91E63",
+		"explorable": true
+	},
+	{
+		"id": "earth",
+		"name": "earth science",
+		"color": "hsl(90, 100%, 45%)",
 		"explorable": true
 	},
 	{
