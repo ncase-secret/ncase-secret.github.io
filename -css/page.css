@@ -190,6 +190,7 @@ b, strong{
 #gallery[size=small] #entry:hover #thumb{}
 #gallery[size=small] #entry #name{
 	font-size: 22px;
+	margin-top: 3px;
 }
 #gallery[size=small] #entry #description{
 	font-size: 20px;

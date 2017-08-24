@@ -143,8 +143,8 @@ var _makeGalleryEntry = function(entry){
 	
 	// Thumbnail
 	var thumb = _createDom("thumb", dom, "img");
-	//thumb.src = "-thumbs/"+entry.thumb;
-	thumb.src = "-thumbs/placeholder.jpg";
+	thumb.src = "-thumbs/"+entry.thumb;
+	//thumb.src = "-thumbs/placeholder.jpg";
 	
 	// Name
 	var name = _createDom("name", dom, "div");
@@ -153,7 +153,7 @@ var _makeGalleryEntry = function(entry){
 
 	// Colored tags
 	for(var i=0; i<entry.tags.length; i++){
-		var tag = _makeTagButton(entry.tags[i], true);
+		var tag = _makeTagButton(entry.tags[i], {small:true});
 		if(tag) name.appendChild(tag);
 	}
 
@@ -177,7 +177,8 @@ var _makeTagStyle = function(tags){
 };
 
 // CREATE TAG
-var _makeTagButton = function(tagID, small){
+var _makeTagButton = function(tagID, options){
+	options = options || {};
 	var conf = tags.filter(function(tag){
 		return tag.id==tagID;
 	})[0];
@@ -186,7 +187,7 @@ var _makeTagButton = function(tagID, small){
 	button.href = "/"+tagID;
 	button.classList.add("tag");
 	button.classList.add("tag_"+tagID);
-	if(small) button.setAttribute("small", "yes");
+	if(options.small) button.setAttribute("small", "yes");
 	button.innerHTML = conf.name;
 	return button;
 };
