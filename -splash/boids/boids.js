@@ -44,10 +44,10 @@ window.onload = function(){
 
 		// DRAW CIRCLE
 		ctx.beginPath();
-		ctx.arc(Mouse.x, Mouse.y, 25, 0, Math.TAU, false);
+		ctx.arc(Mouse.x*2, Mouse.y*2, 25, 0, Math.TAU, false);
 		ctx.fill();
 		ctx.beginPath();
-		ctx.arc(Mouse.x, Mouse.y, runRadius*0.7, 0, Math.TAU, false);
+		ctx.arc(Mouse.x*2, Mouse.y*2, runRadius*0.7, 0, Math.TAU, false);
 		ctx.lineWidth = 1;
 		ctx.stroke();
 
@@ -109,8 +109,9 @@ function Boid(){
 			}
 
 			// GET AWAY FROM THE MOUSE
-			if(_ifPointTooClose(Mouse, self, runRadius)){
-				var center = [Mouse.x, Mouse.y];
+			var M = {x:Mouse.x*2, y:Mouse.y*2};
+			if(_ifPointTooClose(M, self, runRadius)){
+				var center = [M.x, M.y];
 				_addToVector(center, [-self.x,-self.y]); // relative center
 				var power = 1 - (_magnitude(center)/runRadius);
 				_normalize(center, -0.5*power);

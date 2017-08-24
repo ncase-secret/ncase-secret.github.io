@@ -23,8 +23,6 @@
 	document.body.addEventListener("mousemove",onMouseMove = function(event){
 		Mouse.x = event.pageX;
 		Mouse.y = event.pageY - window.pageYOffset;
-		Mouse.x *= 2; // retina
-		Mouse.y *= 2; // retina
 	},false);
 
 	document.body.addEventListener("touchstart",function(event){
@@ -39,8 +37,6 @@
 	document.body.addEventListener("touchmove",onTouchMove = function(event){
 		Mouse.x = event.changedTouches[0].clientX;
 		Mouse.y = event.changedTouches[0].clientY - window.pageYOffset;
-		Mouse.x *= 2; // retina
-		Mouse.y *= 2; // retina
 	},false);
 
 

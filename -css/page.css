@@ -123,19 +123,21 @@ b, strong{
 
 #words{
 	width: 100%;
-	padding: 30px 0;
+	padding-top: 10px;
+	padding-bottom: 30px;
 }
 #intro{
 	max-width: calc(100% - 50px);
 	width:640px;
 	margin: auto;
 	text-align: justify;
+	overflow: hidden;
 }
 #gallery{
 	max-width: calc(100% - 40px);
 	width:800px;
 	margin: auto;
-	margin-top: 40px;
+	margin-top: 20px;
 	overflow: hidden;
 }
 #gallery #entry{
@@ -207,7 +209,8 @@ b, strong{
 #footer_nav_container{
 	width: 100%;
 	padding: 50px 0;
-	background: #eee;
+	background: #f0f0f0;
+	text-align: justify;
 }
 #footer_nav{
 	margin: 0 auto;
@@ -216,7 +219,7 @@ b, strong{
 }
 #tags_explorables, #tags_not_explorables{
 	text-align:center;
-	margin: 0.5em 0;
+	margin-top: 1em;
 }
 .tag{
 	position: relative;

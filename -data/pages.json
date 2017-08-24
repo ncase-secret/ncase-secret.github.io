@@ -13,7 +13,28 @@
 			<span style='position:relative;right:-5px'>P</span>L<span style='position:relative;left:-3px'>O</span>
 			<span style='position:relative;left:-8px'>R</span>ABLE</b><br>
 			<span style='letter-spacing:5px'>EXP<span style='position:relative;left:-6px'>L</span>ANATIONS</span>",
-		"intro": "something about humans' unique capacity for play, or whatever. <b>Here's three random Explorables:</b>",
+		
+		"intro": "
+			<p>
+			Lion cubs play-fight to learn hunting skills. 
+			Rats play to learn social & emotional skills. 
+			Monkeys play to learn cognitive, creative, and improvisational skills. 
+			</p>
+			<p>
+			And yet — in the last century, we humans have somehow convinced ourselves that 
+			1) play is a waste of time, and 2) <i>learning must be boring</i>. 
+			Golly, no wonder we’re all so miserable. 
+			</p>
+			<p> 
+			Welcome to <b>Explorable Explanations</b>, 
+			a hub for learning complex ideas through play! 
+			We’re a totally unorganized “movement” of artists, programmers, and educators 
+			who care about <i>active learning</i>. 
+			</p>
+			<p> 
+			Let's get started! Here, you can check out these <b>three random Explorables</b>: 
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -31,8 +52,16 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>MATH</b>",
-		"intro": "something about MATH
-				  and play or whatever",
+		
+		"intro": "
+			<p>
+			Galileo Galilei once said: “Mathematics is the language with which God has written the universe.” 
+			Too bad most schools are awful at helping us become fluent in <i>Universe</i>. 
+			</p><p>
+			So, instead, here’s a bunch of mathematical games which 
+			can help you learn the Universe’s language, through play: 
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -45,8 +74,14 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>SOCIAL</b><br>SCIENCE",
-		"intro": "something about understanding humans",
 		"customCSS": "#splash_title{ margin-top: 65px; }",
+
+		"intro": "
+			<p>
+			Now, more than ever, we need to understand people, and create <i>more understanding</i> people. 
+			So, here’s some stuff that let you explore what it means to be human(s): 
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -59,7 +94,14 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "THE <b>ARTS</b>",
-		"intro": "something about art being the pinnacle of human playfulness",
+		
+		"intro": "
+			<p>
+			We <i>play</i> music, we put on a <i>play</i>, we type up screen<i>plays</i>. 
+			That’s what art is: <i>play</i>, playing with ideas and materials and human emotions. 
+			So, here’s some games & interactives to help you better understand different forms of art: 
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -72,7 +114,13 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>CIVICS</b>",
-		"intro": "something about human democracy",
+		"intro": "
+			<p>
+			How can our democracy be well-informed, if we’re not well-informed about our democracy? 
+			Here are some explorable explanations of how our complex governmental machinery works... 
+			or doesn’t work:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -85,7 +133,16 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>BIOLOGY</b>",
-		"intro": "something about life",
+		"intro": "
+			<p>
+			Of all the <i>things</i> in our vast universe, 
+			only an eeny, teeny, weeny fraction of those <i>things</i> can grow, can evolve, 
+			can have goals, and can take action towards those goals. 
+			It’s that mysterious property called: <i>being alive</i>.
+			</p><p>
+			Here’s some explorables about the magic of life:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -98,7 +155,14 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>JOURNALISM</b>",
-		"intro": "something about journalism, informed democracy",
+		"intro": "
+			<p>
+			Journalism, at its best, empowers us to be <i>active</i> citizens. 
+			And what better way to do that, than to make the journalism <i>itself</i> active? 
+			</p><p>
+			Here’s some interactive pieces of journalism, that let readers understand current events in a deeper way:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -111,7 +175,13 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>PHILOSOPHY</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			<i>Why? How? What if?</i> Philosophy is the act of playing with ideas — 
+			so, here’s a list of philosophical games, that let you ask deep questions, through play:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -124,7 +194,20 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>PHYSICS</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			<i>Gedankenexperiment</i>. 
+			That’s the German word Albert Einstein used to explain what he did. 
+			<i>Gedanken</i> = thoughts, <i>experiment</i> = experiment. 
+			By <i>playing</i> with thought experiments in his head, good ol’ Al 
+			could unlock the secrets of the universe.
+			</p><p>
+			Here’s some explorable explanations of physics, 
+			so you can learn by <i>playing</i> with ideas, theories, simulations... 
+			<i>gedankenexperiments</i>.
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -137,7 +220,15 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>CHEMISTRY</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			Look around you. The world is made of stuff. How does stuff become stuff? 
+			How do you make one stuff into another stuff? Why does stuff stuff <i>stuff</i> stuff stuff?
+			</p><p>
+			Here’s some explorable explanations about chemistry, because matter <i>matters</i>:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -150,7 +241,17 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>PSYCHOLOGY</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			You are a three-pound ball of wrinkly meat, sitting in a boney sphere, 
+			reading these words through two holes in the front. 
+			And it’s not just you — all your friends, your loved ones, every person that lives, 
+			has lived, will live — is also a thinking, dreaming, wet sponge-y ball of meat.
+			</p><p>
+			Here’s some explorable explanations about the miracle that is the human mind:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -163,7 +264,16 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>ECONOMICS</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			It makes the world go round. It’s the root of all evil. It can’t buy happiness. 
+			It doesn’t grow on trees. It talks.
+			</p><p>
+			Here’s some playful interactives about economics; 
+			making the dismal science a lil’ less dismal:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -176,7 +286,17 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>PROGRAMMING</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			Imagine you had a genie who, with the right sequence of words, 
+			you could command to create magic. Now imagine it’s a genie who grants wishes <i>really</i> literally, 
+			and if you mispronounce a single word the genie explodes.
+			</p><p>
+			That’s what programming is like. Here’s some explorable explanations to give you a less scary, 
+			more playful guide to creating code:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -189,7 +309,14 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>EARTH</b> SCIENCE",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			A big, blue-ish green rock hurtling through the cold, empty void. Or in other words: home.
+			</p><p>
+			Here’s some explorables about our one and only Earth:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -202,7 +329,13 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>META</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			Sometimes, it’s hard to explain what an explorable explanation is. 
+			So, here are some explorable explanations about explorable explanations:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -215,7 +348,10 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>MISC</b>ELLANEOUS",
-		"intro": "blah blah blah",
+
+		"intro": "
+			<p>...and here’s all the shtuff I couldn’t figure out how to categorize:</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -233,7 +369,14 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>TOOLS</b>",
-		"intro": "blah blah blah",
+
+		"intro": "
+			<p>
+			Want to make your <i>own</i> explorable explanations? 
+			Well, you’re in... partial luck! 
+			Here’s a list of tools to make explorables, that require little or NO programming:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -245,7 +388,15 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>TUTORIALS</b>",
-		"intro": "blah blah blah",
+		
+		"intro": "
+			<p>
+			Tools are just <i>what</i> you make things with — 
+			but you also need to know <i>how</i> to craft, to design things!
+			</p><p>
+			Here’s a list of tutorials on how to design your own explorable explanation:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -257,8 +408,18 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "FURTHER<br><b>READING</b>",
-		"intro": "blah blah blah",
 		"customCSS": "#splash_title{ margin-top: 65px; }",
+		
+		"intro": "
+			<p>
+			We shouldn't make chocolate-covered broccoli. 
+			That is: we shouldn’t just take old, soul-sucking educational materials and simply slap 
+			“fun” “game” “play” on top. We need to understand, deeply, <i>why play matters</i>.
+			</p>
+			<p>
+			Here’s some essays/talks on the theory of learning by play:
+			</p>
+		",
 
 		"splash": "boids",
 		"gallery": {
@@ -270,8 +431,10 @@
 		"desc": "blah blah blah",
 
 		"splashTitle": "<b>F</b>REQUENTLY <b>A</b>SKED<br><b>Q</b>UESTIONS",
-		"intro": "blah blah blah",
 		"customCSS": "#splash_title{ font-size: 90px; line-height: 1em; margin-top: 35px; }",
+		
+		"intro": "
+		",
 
 		"splash": "boids",
 		"gallery": {

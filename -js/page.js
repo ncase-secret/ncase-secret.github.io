@@ -66,6 +66,7 @@ var _showPage = function(pageID){
 var _showGallery = function(query, tag){
 
 	var gallery = $("#gallery");
+	gallery.innerHTML = "";
 
 	// Load all by tag
 	var results = explorables.filter(function(e){
