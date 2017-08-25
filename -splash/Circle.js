@@ -1,3 +1,5 @@
+Math.TAU = Math.PI*2;
+
 var innerCircleSize = 25;
 var outerCircleRatio = 1;
 var _drawCircle = function(ctx, outerRadius){
