@@ -55,6 +55,7 @@ b, strong{
 	line-height: 0.85em;
 	margin-top: 115px;
 	pointer-events: none;
+	cursor: default;
 }
 #splash_arrow{
 	position: absolute;
@@ -161,7 +162,7 @@ b, strong{
     margin-top: 6px;
 }
 #gallery #entry #description{
-	color: #999;
+	color: #909090;
 	font-size: 22px;
 	line-height: 1.3em;
 }

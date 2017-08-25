@@ -36,20 +36,13 @@ window.onload = function(){
 		// Clear
 		ctx.clearRect(0,0,canvas.width,canvas.height);
 		ctx.lineWidth = 2;
-		ctx.strokeStyle = "rgba(255,255,255,0.5)";
-		ctx.fillStyle = "rgba(255,255,255,0.75)";
 
 		// Draw Boids
+		ctx.strokeStyle = "rgba(255,255,255,0.5)";
 		for(var i=0;i<boids.length;i++) boids[i].draw(ctx);
 
 		// DRAW CIRCLE
-		ctx.beginPath();
-		ctx.arc(Mouse.x*2, Mouse.y*2, 25, 0, Math.TAU, false);
-		ctx.fill();
-		ctx.beginPath();
-		ctx.arc(Mouse.x*2, Mouse.y*2, runRadius*0.7, 0, Math.TAU, false);
-		ctx.lineWidth = 1;
-		ctx.stroke();
+		_drawCircle(ctx, runRadius*0.7);
 
 		// RAF
 		window.requestAnimationFrame(draw);
@@ -114,7 +107,11 @@ function Boid(){
 				var center = [M.x, M.y];
 				_addToVector(center, [-self.x,-self.y]); // relative center
 				var power = 1 - (_magnitude(center)/runRadius);
-				_normalize(center, -0.5*power);
+				if(Mouse.pressed){
+					_normalize(center, 0.5*power);
+				}else{
+					_normalize(center, -0.5*power);
+				}
 				_addToVector(myVector, center);
 			}
 

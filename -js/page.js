@@ -213,7 +213,7 @@ var _csvToJSON = function(csv){
 		// Get props
 		var props = line.split('\",\"');
 		props[0] = props[0].slice(1); // remove quotes
-		props[5] = props[5].slice(0, props[5].length-1); // remove quotes
+		props[6] = props[6].slice(0, props[6].length-1); // remove quotes
 
 		// Convert props
 		var tags = [props[4]];

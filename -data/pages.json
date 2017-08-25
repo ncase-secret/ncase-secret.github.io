@@ -36,7 +36,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"index": true,
 			"sort": "random"
@@ -63,7 +63,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -83,7 +83,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -103,7 +103,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -122,7 +122,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -144,7 +144,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "ca/growth.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -164,7 +164,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -183,7 +183,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -209,7 +209,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -230,7 +230,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "ca/bz.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -253,7 +253,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -276,7 +276,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -299,7 +299,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "ca/conway.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -319,7 +319,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -338,7 +338,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -354,7 +354,7 @@
 			<p>...and here’s all the shtuff I couldn’t figure out how to categorize:</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -379,7 +379,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -399,7 +399,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -422,7 +422,7 @@
 			</p>
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -437,7 +437,7 @@
 		"intro": "
 		",
 
-		"splash": "boids",
+		"splash": "boids/boids.html",
 		"gallery": {
 			"sort": "featured-first"
 		}

@@ -49,7 +49,7 @@ for(var pageID in pages){
 	}
 
 	// 5. Iframe Src
-	html = html.replace("[[iframe_src]]", "/-splash/"+page.splash+"/");
+	html = html.replace("[[iframe_src]]", "/-splash/"+page.splash);
 
 	// 6. Splash title
 	html = html.replace("[[splash_title]]", page.splashTitle);
