@@ -3,7 +3,7 @@
 "District","a puzzle game about gerrymandering & proportional representation","http://polytrope.com/district/","district.png","civics","yes","Chris Walker"
 "Virus: The Beauty of the Beast","an interactive documentary on the mathematical majesty of viruses","http://viruspatterns.com/","virus.png","biology","yes","Hamish Todd"
 "Learning Music","an interactive tour to making music","https://learningmusic.ableton.com/","learning_music.png","art","yes",""
-"dat.gui","a tool for making interactives","https://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage","datgui.png","tools","",""
+"dat.gui","a tool for making interfaces to modify variables in real-time","https://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage","datgui.png","tools","",""
 "The Evolution of Trust","a game about the game theory of social trust & cooperation","http://ncase.me/trust/","trust.png","social","yes","Nicky Case"
 "The New Science of Sentencing","play with algorithms that (try to) predict crime","https://www.themarshallproject.org/2015/08/04/the-new-science-of-sentencing","sentencing.png","journalism","",""
 "Idyll","a language for making interactive documents on the web","https://idyll-lang.github.io/editor/","idyll.png","tools","",""

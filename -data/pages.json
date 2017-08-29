@@ -63,7 +63,7 @@
 			</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "math/math.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -122,7 +122,7 @@
 			</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "confetti/civics.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -319,7 +319,7 @@
 			</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "earth/earth.html",
 		"gallery": {
 			"sort": "featured-first"
 		}

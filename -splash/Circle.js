@@ -19,7 +19,7 @@ var _drawCircle = function(ctx, outerRadius){
 	ctx.fill();
 
 	// Outer circle
-	if(!window.Mouse2){
+	if(!window.Mouse2 && !window.noOuterCircle){
 
 		var outerCircleRatioGOTO;
 		if(window.CONFETTI_HACK){
