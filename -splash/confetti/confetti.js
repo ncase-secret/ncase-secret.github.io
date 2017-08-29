@@ -1,3 +1,5 @@
+window.CONFETTI_HACK = true;
+
 Math.TAU = Math.PI*2;
 
 var particles = [];

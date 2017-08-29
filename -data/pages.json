@@ -83,7 +83,7 @@
 			</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "network/social.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -209,7 +209,7 @@
 			</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "physics/physics.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -253,7 +253,7 @@
 			</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "network/psych.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -338,7 +338,7 @@
 			</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "physics/meta.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
@@ -354,7 +354,7 @@
 			<p>...and here’s all the shtuff I couldn’t figure out how to categorize:</p>
 		",
 
-		"splash": "boids/boids.html",
+		"splash": "physics/misc.html",
 		"gallery": {
 			"sort": "featured-first"
 		}
