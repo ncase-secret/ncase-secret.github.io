@@ -161,7 +161,7 @@ b, strong{
 #gallery #entry #name{
 	color: #000;
 	font-weight: 700;
-	line-height: 1em;
+	line-height: 1.3em;
     margin-top: 6px;
 }
 #gallery #entry #description{
@@ -197,6 +197,7 @@ b, strong{
 #gallery[size=small] #entry #name{
 	font-size: 22px;
 	margin-top: 3px;
+	margin-bottom: 5px;
 }
 #gallery[size=small] #entry #description{
 	font-size: 20px;
@@ -246,6 +247,7 @@ b, strong{
 	line-height: 25px;
 	padding: 0 10px;
 	font-weight: 100;
+	margin: 1px;
 }
 
 /*******************

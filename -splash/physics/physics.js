@@ -34,6 +34,19 @@ if(window.SPLASH=="meta"){
     img.src="meta.png";
 }
 
+var images = {
+    tv: new Image(),
+    paper: new Image(),
+    mike: new Image(),
+    phone: new Image()
+};
+if(window.SPLASH=="journalism"){
+    images.tv.src = "tv.png";
+    images.paper.src = "paper.png";
+    images.mike.src = "mike.png";
+    images.phone.src = "phone.png";
+}
+
 (function render() {
 
     var bodies = Composite.allBodies(engine.world);
@@ -43,18 +56,26 @@ if(window.SPLASH=="meta"){
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.beginPath();
 
+    context.save();
+    if(window.SPLASH=="journalism"){
+        context.globalAlpha = 0.5;
+    }
+
     // Draw all of 'em
     for (var i = 0; i < bodies.length; i += 1) {
     	if(i<7) continue;
 
-        if(window.SPLASH=="misc" || window.SPLASH=="meta"){
-            //debugger;
+        if(window.SPLASH){
+            
             var body = bodies[i];
             context.save();
             context.translate(body.position.x, body.position.y);
             context.rotate(body.angle);
-            context.drawImage(img, -img.width/2, -img.height/2);
+            var image = img;
+            if(body._IMAGE_) image=images[body._IMAGE_];
+            context.drawImage(image, -image.width/2, -image.height/2);
             context.restore();
+
         }else{
 
             var vertices = bodies[i].vertices;
@@ -67,9 +88,13 @@ if(window.SPLASH=="meta"){
         }
 
     }
-    context.lineWidth = 4;
-    context.strokeStyle = "rgba(255,255,255,0.5)";
-    context.stroke();
+    if(!window.SPLASH){
+        context.lineWidth = 4;
+        context.strokeStyle = "rgba(255,255,255,0.5)";
+        context.stroke();
+    }
+
+    context.restore();
 
     // DRAW CIRCLE
     _drawCircle(context, 200);
@@ -137,6 +162,13 @@ if(window.SPLASH=="meta"){
 }
 var rows = Math.floor((h/2)/shapeH)-3;
 
+var things = [
+    {img:"tv", w:200, h:180},
+    {img:"paper", w:150, h:160},
+    {img:"mike", w:80, h:120},
+    {img:"phone", w:80, h:120}
+];
+
 // add bodies
 var stack = Composites.stack(shapeW, shapeH, columns, rows, shapeW, shapeH, function(x,y) {
     
@@ -162,9 +194,18 @@ var stack = Composites.stack(shapeW, shapeH, columns, rows, shapeW, shapeH, func
         Matter.Body.rotate(rect, (Math.random()-0.5)*0.5);
         return rect;
 
+    }else if(window.SPLASH=="journalism"){
+
+        var thing = things[Math.floor(Math.random()*things.length)];
+        var rect = Bodies.rectangle(x+(Math.random()-0.5)*100, y, thing.w, thing.h);
+        Matter.Body.rotate(rect, (Math.random()-0.5)*0.5);
+        rect._IMAGE_ = thing.img;
+        return rect;
+
     }
 
 });
+
 
 World.add(engine.world, stack);
 

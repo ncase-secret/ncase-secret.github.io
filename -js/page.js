@@ -215,8 +215,10 @@ var _csvToJSON = function(csv){
 		props[0] = props[0].slice(1); // remove quotes
 		props[6] = props[6].slice(0, props[6].length-1); // remove quotes
 
+		// Convert tags into array
+		var tags = props[4].split(/,\s*/).sort();
+
 		// Convert props
-		var tags = [props[4]];
 		if(props[5]=="yes") tags.push("featured");
 
 		// Oh. Forget it.
