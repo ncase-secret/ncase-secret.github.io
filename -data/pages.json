@@ -6,8 +6,7 @@
 
 	"index": {
 		"title": "",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "
 			<b style='letter-spacing:6px; font-size:1.085em'>E<span style='position:relative;right:-4px'>X</span>
 			<span style='position:relative;right:-5px'>P</span>L<span style='position:relative;left:-3px'>O</span>
@@ -39,7 +38,28 @@
 		"splash": "boids/boids.html",
 		"gallery": {
 			"index": true,
-			"sort": "random"
+			"sort": "random",
+			"count": 3
+		}
+	},
+
+	"all": {
+		"title": "ALL OF IT",
+		
+		"splashTitle": "<b>ALL</b> OF IT",
+		
+		"intro": "
+			<p>
+			Here's <b>ALL <span id='how_many_total'>...</span> ENTRIES</b> we have so far: 
+			both interactive explorable explanations, and articles/talks <i>about</i> explorable explanations. 
+			Enjoy!
+			</p>
+		",
+
+		"splash": "boids/boids.html",
+		"gallery": {
+			"sort": "featured-first",
+			"count": 10
 		}
 	},
 
@@ -49,8 +69,7 @@
 
 	"math": {
 		"title": "Math",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>MATH</b>",
 		
 		"intro": "
@@ -71,10 +90,9 @@
 
 	"social": {
 		"title": "Social Science",
-		"desc": "blah blah blah",
-
-		"splashTitle": "<b>SOCIAL</b><br>SCIENCE",
-		"customCSS": "#splash_title{ margin-top: 65px; }",
+		
+		"splashTitle": "<b>SOCIAL</b> SCIENCE",
+		"customCSS": "@media (max-width: 960px){ #splash_title{ width: 500px; margin: 70px auto; } }",
 
 		"intro": "
 			<p>
@@ -91,8 +109,7 @@
 
 	"art": {
 		"title": "Arts",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "THE <b>ARTS</b>",
 		
 		"intro": "
@@ -111,8 +128,7 @@
 
 	"civics": {
 		"title": "Civics",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>CIVICS</b>",
 		"intro": "
 			<p>
@@ -130,8 +146,7 @@
 
 	"biology": {
 		"title": "Biology",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>BIOLOGY</b>",
 		"intro": "
 			<p>
@@ -152,9 +167,10 @@
 
 	"journalism": {
 		"title": "Journalism",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>JOURNALISM</b>",
+		"customCSS": "@media (max-width: 800px){ #splash_title{ margin-top:130px; font-size:85px; } }",
+
 		"intro": "
 			<p>
 			Journalism, at its best, empowers us to be <i>active</i> citizens. 
@@ -172,9 +188,9 @@
 	
 	"philosophy": {
 		"title": "Philosophy",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>PHILOSOPHY</b>",
+		"customCSS": "@media (max-width: 800px){ #splash_title{ margin-top:130px; font-size:90px; } }",
 		
 		"intro": "
 			<p>
@@ -191,8 +207,7 @@
 
 	"physics": {
 		"title": "Physics",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>PHYSICS</b>",
 		
 		"intro": "
@@ -217,9 +232,9 @@
 
 	"chemistry": {
 		"title": "Chemistry",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>CHEMISTRY</b>",
+		"customCSS": "@media (max-width: 800px){ #splash_title{ margin-top:125px; font-size:100px; } }",
 		
 		"intro": "
 			<p>
@@ -238,9 +253,9 @@
 
 	"psychology": {
 		"title": "Psychology",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>PSYCHOLOGY</b>",
+		"customCSS": "@media (max-width: 860px){ #splash_title{ margin-top:135px; font-size:90px; } }",
 		
 		"intro": "
 			<p>
@@ -261,9 +276,9 @@
 
 	"economics": {
 		"title": "Economics",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>ECONOMICS</b>",
+		"customCSS": "@media (max-width: 800px){ #splash_title{ margin-top:125px; font-size:100px; } }",
 		
 		"intro": "
 			<p>
@@ -284,9 +299,9 @@
 
 	"programming": {
 		"title": "Programming",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>PROGRAMMING</b>",
+		"customCSS": "@media (max-width: 960px){ #splash_title{ margin-top:140px; font-size:75px; } }",
 		
 		"intro": "
 			<p>
@@ -307,9 +322,9 @@
 
 	"earth": {
 		"title": "Earth Science",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>EARTH</b> SCIENCE",
+		"customCSS": "@media (max-width: 900px){ #splash_title{ width: 500px; margin: 70px auto; } }",
 		
 		"intro": "
 			<p>
@@ -327,8 +342,7 @@
 
 	"meta": {
 		"title": "Meta",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>META</b>",
 		
 		"intro": "
@@ -346,9 +360,9 @@
 
 	"misc": {
 		"title": "Misc",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>MISC</b>ELLANEOUS",
+		"customCSS": "@media (max-width: 1000px){ #splash_title{ margin-top:135px; font-size:75px; } }",
 
 		"intro": "
 			<p>...and here’s all the shtuff I couldn’t figure out how to categorize:</p>
@@ -367,8 +381,7 @@
 
 	"tools": {
 		"title": "Tools",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>TOOLS</b>",
 
 		"intro": "
@@ -386,9 +399,9 @@
 	},
 	"tutorials": {
 		"title": "Tutorials",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>TUTORIALS</b>",
+		"customCSS": "@media (max-width: 700px){ #splash_title{ margin-top:120px; font-size:110px; } }",
 		
 		"intro": "
 			<p>
@@ -406,10 +419,9 @@
 	},
 	"reading": {
 		"title": "Further Reading",
-		"desc": "blah blah blah",
-
-		"splashTitle": "FURTHER<br><b>READING</b>",
-		"customCSS": "#splash_title{ margin-top: 65px; }",
+		
+		"splashTitle": "FURTHER <b>READING</b>",
+		"customCSS": "@media (max-width: 1100px){ #splash_title{ width: 640px; margin: 65px auto; } }",
 		
 		"intro": "
 			<p>
@@ -429,10 +441,12 @@
 	},
 	"faq": {
 		"title": "FAQ",
-		"desc": "blah blah blah",
-
+		
 		"splashTitle": "<b>F</b>REQUENTLY <b>A</b>SKED<br><b>Q</b>UESTIONS",
-		"customCSS": "#splash_title{ font-size: 90px; line-height: 1em; margin-top: 35px; }",
+		"customCSS": "
+			#splash_title{ font-size: 110px; line-height: 1em; margin-top: 60px; }
+			@media (max-width: 1050px){ #splash_title{ width:640px; margin: 50px auto; font-size: 80px; } }
+		",
 		
 		"intro": "
 
@@ -468,7 +482,7 @@
 
 		<p><strong>I&#39;ve got a question / a critique / a recommendation for an explorable to add to this site!</strong></p>
 
-		//<p>Great! Ping us at <script> document.write(\"<n uers='znvygb:rkcybenoyr.rkcynangvbaf@tznvy.pbz' ery='absbyybj'>rkcybenoyr.rkcynangvbaf@tznvy.pbz</n>\".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<'Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})); </script></p>
+		<p>Great! Ping us at <script> document.write(\"<n uers='znvygb:rkcybenoyr.rkcynangvbaf@tznvy.pbz' ery='absbyybj'>rkcybenoyr.rkcynangvbaf@tznvy.pbz</n>\".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<'Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})); </script></p>
 
 		<p>We&#39;re all terrible at email, but we&#39;ll try to check it as much as our respective work schedules allow! Hey, I warned you about us being a disorganized &quot;movement&quot;.</p>
 

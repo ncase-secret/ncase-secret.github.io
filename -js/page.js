@@ -34,6 +34,13 @@ var _showPage = function(pageID){
 
 	// Show gallery
 	var tag = pageIsIndex ? "featured" : pageID; // tag is "featured" or pageID!
+	if(pageID=="all"){
+		var totalDOMs = document.querySelectorAll("#how_many_total");
+		totalDOMs.forEach(function(dom){
+			dom.innerHTML = explorables.length;
+		});
+		tag=null;
+	}
 	_showGallery(page.gallery, tag);
 
 	// Show tags
@@ -69,10 +76,10 @@ var _showGallery = function(query, tag){
 	gallery.innerHTML = "";
 
 	// Load all by tag
-	var results = explorables.filter(function(e){
+	var results = tag ? explorables.filter(function(e){
 		//return true;
 		return e.tags.indexOf(tag)>=0; // yes, has the tag!
-	});
+	}) : explorables.slice(0);
 
 	// Sort the results
 	switch(query.sort){
@@ -109,7 +116,7 @@ var _showGallery = function(query, tag){
 		}); 
 
 		gallery.setAttribute("size", "big"); // Make it big
-		results = results.splice(0,3); // Only show first THREE results
+		//results = results.splice(0,3); // Only show first THREE results
 
 	}else{
 
@@ -117,18 +124,69 @@ var _showGallery = function(query, tag){
 
 	}
 
+	var showStart = 0;
+	var showEnd = query.count || results.length;
+
 	// Insert each result into the gallery
-	for(var i=0; i<results.length; i++){
+	var _show = function(fadeIn){
+		for(var i=showStart; i<showEnd && i<results.length; i++){
 
-		var entry = _makeGalleryEntry(results[i]);
-		gallery.appendChild(entry);
+			var entry = _makeGalleryEntry(results[i]);
 
-		// Divider...
-		if(!query.index && i%2==1){
-			var span = document.createElement("span");
-			span.className = "divider";
-			gallery.appendChild(span);
+			// Fade in?
+			if(fadeIn){
+				(function(entry){
+					var dom = entry.querySelector("#entry");
+					dom.style.opacity = 0;
+					dom.style.top = "30px";
+					setTimeout(function(){
+						dom.style.opacity = 1;
+						dom.style.top = "0px";
+					}, (i-showStart)*150);
+				})(entry);
+			}
+
+			gallery.appendChild(entry);
+
+			// Divider...
+			if(!query.index && i%2==1){
+				var span = document.createElement("span");
+				span.className = "divider";
+				gallery.appendChild(span);
+			}
+
 		}
+		showStart = showEnd;
+	};
+	_show();
+
+	// INDEX PAGE ONLY: "LOAD MORE"
+	var loadMoreButton;
+	var countToWords;
+	if(query.count==3) countToWords="three";
+	if(query.count==10) countToWords="ten";
+	var say = ["load "+countToWords+" more!", "even more!", "more please!"];
+	var sayIndex = 0;
+	if(query.count){
+		loadMoreButton = document.createElement("div");
+		loadMoreButton.id = "load_more";
+		loadMoreButton.innerHTML = say[sayIndex];
+		gallery.appendChild(loadMoreButton);
+
+		loadMoreButton.onclick = function(){
+			
+			gallery.removeChild(loadMoreButton);
+			
+			if(sayIndex<say.length-1) sayIndex++;
+			loadMoreButton.innerHTML = say[sayIndex];
+
+			showEnd += query.count;
+			_show(true);
+			if(showEnd<results.length){
+				gallery.appendChild(loadMoreButton);
+			}
+
+		};
 
 	}
 

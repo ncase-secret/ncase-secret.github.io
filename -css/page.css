@@ -147,6 +147,8 @@ b, strong{
 #gallery #entry{
 	float:left;
 	margin-bottom: 35px;
+	position: relative;
+	transition: opacity 0.6s ease-in-out, top 0.6s ease-in-out;
 }
 #gallery #entry #thumb{
 	border: 1px solid #eee;
@@ -205,6 +207,33 @@ b, strong{
 #gallery[size=small] .divider{
 	display: block;
 	clear:both;
+}
+#load_more{
+	
+	clear: both;
+	margin: 0 auto;
+	
+	border: 2px solid black;
+	border-radius: 10px;
+
+	font-size: 30px;
+	text-align: center;
+	font-weight: 100;
+	
+	width: 300px;
+	height: 40px;
+	padding: 10px 0;
+	cursor: pointer;
+
+	transition: all 0.1s ease-in-out;
+	position: relative;
+	top:0;
+	opacity: 1.0;
+	
+}
+#load_more:hover{
+	opacity: 0.5;
+	top:-3px;
 }
 
 /*******************

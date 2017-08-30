@@ -150,10 +150,10 @@ World.add(engine.world, [
 
 var shapeW = 80;
 if(window.SPLASH=="misc"){
-    shapeW = 150;
+    shapeW = 100;
 }
 if(window.SPLASH=="meta"){
-    shapeW = 100;
+    shapeW = 90;
 }
 var columns = Math.floor((w/2)/shapeW)-3;
 var shapeH = 50;

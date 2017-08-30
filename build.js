@@ -12,6 +12,7 @@ for(var pageID in pages){
 
 	// What page is this? (and is this the index?)
 	var isIndex = (pageID=="index");
+	var isAll = (pageID=="all");
 	var page = pages[pageID];
 
 	////////////////////////////////
@@ -41,7 +42,7 @@ for(var pageID in pages){
 	}
 
 	// 4. Splash BG color
-	if(isIndex){
+	if(isIndex || isAll){
 		html = html.replace("[[splash_color]]", "");
 	}else{
 		var tag = tags.filter(function(tag){ return tag.id==pageID; })[0];

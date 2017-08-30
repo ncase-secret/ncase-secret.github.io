@@ -64,7 +64,7 @@ var image = new Image();
 image.src = imageSource;
 var _x = 0;
 var _notRandomX = function(){
-	_x += imageWidth*4;
+	_x += 100*4*(window.innerWidth/1280); //whatever
 	if(_x>window.innerWidth*2) _x-=window.innerWidth*2;
 	return _x;
 };
