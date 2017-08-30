@@ -27,7 +27,7 @@ for(var pageID in pages){
 	// 2. Title
 	var title = "Explorable Explanations";
 	if(!isIndex) title = page.title+" | "+title;
-	html = html.replace("[[title]]", title);
+	html = html.replace(/\[\[title\]\]/g, title);
 
 	// 3. Index style? If Text is TOO BIG
 	if(page.customCSS){
